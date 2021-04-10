@@ -17,6 +17,7 @@ with open(csvpath, newline='') as csvfile:
     li = []
     otooley = []
 
+
     for row in csvreader:
         votes.append(int(row[0]))
         county.append(row[1])
@@ -40,12 +41,12 @@ with open(csvpath, newline='') as csvfile:
         else:
             otooley.append(candidates)
             otooley_votes = len(otooley)
-                print(khan_votes)
+    print(khan_votes)
     print(correy_votes)
     print(li_votes)
     print(otooley_votes)
-
-
+    
+    
     #Percentages
     khan_percent = round(((khan_votes / total_votes) * 100), 2)
     correy_percent = round(((correy_votes / total_votes) * 100), 2)
@@ -55,6 +56,17 @@ with open(csvpath, newline='') as csvfile:
     print(correy_percent)
     print(li_percent)
     print(otooley_percent)
+    
+    #Winner 
+    if khan_percent > max(correy_percent, li_percent, otooley_percent):
+        winner = "Khan"
+    elif correy_percent > max(khan_percent, li_percent, otooley_percent):
+        winner = "Correy"  
+    elif li_percent > max(correy_percent, khan_percent, otooley_percent):
+        winner = "Li"
+    else:
+        winner = "O'Tooley"
+    
 
 
 
