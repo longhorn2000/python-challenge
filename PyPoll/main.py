@@ -16,3 +16,27 @@ with open(csvpath, newline='') as csvfile:
     correy = []
     li = []
     otooley = []
+
+    for row in csvreader:
+        votes.append(int(row[0]))
+        county.append(row[1])
+        candidates.append(row[2])
+
+    #VOTE COUNT
+    total_votes = (len(votes))
+    print(total_votes)
+
+    #Votes by Person
+    for candidate in candidates:
+        if candidate == "Khan":
+            khan.append(candidates)
+            khan_votes = len(khan)
+        elif candidate == "Correy":
+            correy.append(candidates)
+            correy_votes = len(correy)
+        elif candidate == "Li":
+            li.append(candidates)
+            li_votes = len(li)
+        else:
+            otooley.append(candidates)
+            otooley_votes = len(otooley)
