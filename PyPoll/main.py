@@ -46,5 +46,16 @@ with open(csvpath, newline='') as csvfile:
     print(otooley_votes)
 
 
+    #Percentages
+    khan_percent = round(((khan_votes / total_votes) * 100), 2)
+    correy_percent = round(((correy_votes / total_votes) * 100), 2)
+    li_percent = round(((li_votes / total_votes) * 100), 2)
+    otooley_percent = round(((otooley_votes / total_votes) * 100), 2)
+    print(khan_percent)
+    print(correy_percent)
+    print(li_percent)
+    print(otooley_percent)
+
+
 
             
