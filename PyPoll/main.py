@@ -40,3 +40,11 @@ with open(csvpath, newline='') as csvfile:
         else:
             otooley.append(candidates)
             otooley_votes = len(otooley)
+                print(khan_votes)
+    print(correy_votes)
+    print(li_votes)
+    print(otooley_votes)
+
+
+
+            
